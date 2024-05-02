@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
+<h:head>
+	<title>Sign in - Sign up Form</title>
+	<h:outputStylesheet library="css" name="styles.css"></h:outputStylesheet>
+	<h:outputScript library="javascript" name="app.js"></h:outputScript>
+	<meta charset="utf-8" />
+
+</h:head>
+<h:body>
+
+	<div class="login-form">
+
+		<h:form id="signupForm" class="cloginForm">
+		
+		<p:growl id="growl" showDetail="true" sticky="true" />  
+			<h:panelGrid columns="2" cellpadding="5">
+				<h:outputLabel for="email" value="Email:" />
+				<p:inputText id="email" value="#{userLogin.user.email}" required="true"
+					label="Email" >
+					        <f:validateRegex pattern="^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$" />
+					</p:inputText>
+
+				<h:outputLabel for="password" value="Password:" />
+				<p:password id="password" value="#{userLogin.user.password}"
+					required="true" label="Password" />
+					
+				<h:outputLabel for="name" value="Name:" />
+				<p:inputText id="name" value="#{userLogin.user.name}"
+					required="true" label="Name" />
+				
+				
+
+			</h:panelGrid>
+
+			<br />
+
+			<div style="text-align: center">
+				<p:commandButton style="width: 300px;" value="Signup"
+					action="#{userLogin.signup}" update="signupForm" />
+
+				<p:divider layout="horizontal" style="width: 300px;" />
+				<h:link value="Login" outcome="login" />
+				
+			</div>
+		</h:form>
+
+
+	</div>
+
+
+
+	
+
+
+</h:body>
+</html>
+
+
+
+

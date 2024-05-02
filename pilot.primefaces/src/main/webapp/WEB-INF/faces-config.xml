@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<faces-config xmlns="http://java.sun.com/xml/ns/javaee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+    http://java.sun.com/xml/ns/javaee/web-facesconfig_2_0.xsd"
+	version="2.0">
+
+
+
+	<application>
+
+		<locale-config>
+			<default-locale>en</default-locale> <!-- Default locale -->
+			<supported-locale>en</supported-locale>
+			<supported-locale>de</supported-locale>
+			<!-- Add more supported locales as needed -->
+		</locale-config>
+
+
+		<resource-bundle>
+			<base-name>com.ejada.util.messages</base-name>
+			<var>msgs</var>
+		</resource-bundle>
+	</application>
+	
+	
+	<!-- configuration of navigation rules -->
+	<navigation-rule>
+
+		<from-view-id>index.xhtml</from-view-id>
+		<navigation-case>
+			<from-outcome>failure</from-outcome>
+			<to-view-id>pages/index.xhtml</to-view-id>
+			<redirect />
+		</navigation-case>
+	</navigation-rule>
+
+	<navigation-rule>
+		<navigation-case>
+			<from-outcome>home</from-outcome>
+			<to-view-id>/pages/home.xhtml</to-view-id>
+			<redirect />
+		</navigation-case>
+
+	</navigation-rule>
+
+	<navigation-rule>
+		<navigation-case>
+			<from-outcome>signup</from-outcome>
+			<to-view-id>/pages/signup.xhtml</to-view-id>
+			<redirect />
+		</navigation-case>
+	</navigation-rule>
+
+	<navigation-rule>
+		<navigation-case>
+			<from-outcome>logout</from-outcome>
+			<to-view-id>pages/index.xhtml</to-view-id>
+			<redirect />
+		</navigation-case>
+	</navigation-rule>
+
+
+	<navigation-rule>
+		<navigation-case>
+			<from-outcome>login</from-outcome>
+			<to-view-id>pages/index.xhtml</to-view-id>
+			<redirect />
+		</navigation-case>
+	</navigation-rule>
+
+</faces-config>

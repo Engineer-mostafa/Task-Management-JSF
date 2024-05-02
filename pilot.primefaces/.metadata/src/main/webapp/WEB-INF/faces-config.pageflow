@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pageflow:Pageflow xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pageflow="http://www.sybase.com/suade/pageflow" id="pf16934667870927" configfile="/pilot.primefaces/src/main/webapp/WEB-INF/faces-config.xml">
+  <nodes xsi:type="pageflow:PFPage" name="pages/index.xhtml" x="122" y="178" id="pf16934668098908" referenceLink="//@navigationRule.0/@fromViewId|" outlinks="pf16938264280540" path="index.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="pages/home.xhtml" x="338" y="562" id="pf16937313916085" referenceLink="//@navigationRule.1/@navigationCase.0/@toViewId|" inlinks="pf16940028989150" path="/pages/home.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="index.xhtml" x="338" y="178" id="pf16938264280541" referenceLink="//@navigationRule.4/@navigationCase.0/@toViewId|" inlinks="pf16938264280540 pf16940715744152 pf16940715744153" path="pages/index.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="*" x="122" y="562" id="pf16940028989151" outlinks="pf16940028989150 pf16940715744154 pf16940715744152 pf16940715744153" path="*"/>
+  <nodes xsi:type="pageflow:PFPage" name="pages/signup.xhtml" x="338" y="946" id="pf16940715744155" referenceLink="//@navigationRule.2/@navigationCase.0/@toViewId|" inlinks="pf16940715744154" path="/pages/signup.xhtml"/>
+  <links id="pf16938264280540" target="pf16938264280541" source="pf16934668098908" outcome="failure" redirect="true"/>
+  <links id="pf16940028989150" target="pf16937313916085" source="pf16940028989151" outcome="home" redirect="true"/>
+  <links id="pf16940715744154" target="pf16940715744155" source="pf16940028989151" outcome="signup" redirect="true"/>
+  <links id="pf16940715744152" target="pf16938264280541" source="pf16940028989151" outcome="logout" redirect="true"/>
+  <links id="pf16940715744153" target="pf16938264280541" source="pf16940028989151" outcome="login" redirect="true"/>
+</pageflow:Pageflow>
